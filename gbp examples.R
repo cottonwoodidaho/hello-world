@@ -26,3 +26,16 @@ str(sn2dv2)
 sn2dv2$it
 gbp2d_viewer(sn2dv2, title="testrun")
 
+# testrun2
+# 100 pieces of random size glass between 40x40 sq mm and 100x100 sq mm
+# cut from 30in x 30 in (762mm x 762mm) sheet
+m <- c(762, 762)
+m <- matrix(data = m, nrow = 2, ncol = 1)
+p <- c(rep(100, 1))
+ld <- c(trunc(runif(200, 4, 11))
+# ld <- c(100,150,130,160,120,180,180,180,120,140,150,150,170,140)
+ld <- matrix(data = ld, nrow = 2, ncol = 100)
+sn2dv2 <- gbp2d_solver_dpp(p, ld, m)
+str(sn2dv2)
+sn2dv2$it
+gbp2d_viewer(sn2dv2, title="testrun")
